@@ -7,7 +7,7 @@ before_install:
   - docker build -t emcooper/docker-react-example -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true emcooper/docker-react-example npm run test
+  - docker run -e CI=true emcooper/docker-react-example npm run test -- --coverage
 
 deploy: 
   provider: elasticbeanstalk
